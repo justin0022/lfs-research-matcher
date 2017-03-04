@@ -3,10 +3,11 @@ import { Navbar, NavItem, Nav } from 'react-bootstrap'
 import { Link, IndexLink } from "react-router"
 
 class App extends Component {
-  
+
   render() {
-    console.log(this.props.children);
+    const { children } = this.props
     return (
+
       <div className="container-fluid">
         <Navbar>
             <Navbar.Header>
@@ -18,7 +19,6 @@ class App extends Component {
                 <NavItem eventKey={1}><Link to='/about'>About</Link></NavItem>
             </Nav>
         </Navbar>
-        <h2>Welcome to React</h2>
         <div>{this.props.children}</div>
       </div>
     );
