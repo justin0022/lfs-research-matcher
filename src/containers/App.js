@@ -7,19 +7,20 @@ class App extends Component {
   render() {
     const { children } = this.props
     return (
-
-      <div className="container-fluid">
+      <div>
         <Navbar>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    <IndexLink to='/'>LFS Research Matcher</IndexLink>
-                </Navbar.Brand>
-            </Navbar.Header>
-            <Nav>
-                <NavItem eventKey={1}><Link to='/about'>About</Link></NavItem>
-            </Nav>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <IndexLink to='/'>LFS Research Matcher</IndexLink>
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1}><Link to='/about'>About</Link></NavItem>
+          </Nav>
         </Navbar>
-        <div>{this.props.children}</div>
+        <div className="container-fluid">
+          <div>{children}</div>
+        </div>
       </div>
     );
   }
