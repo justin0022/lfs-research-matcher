@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SearchBar from '../components/SearchBar';
+import { search } from '../actions/searchAction';
 
 class HomePage extends Component {
     constructor() {
@@ -14,6 +16,9 @@ class HomePage extends Component {
     updateStateWithValue(value) {
         const nextState = {...this.state, search: value}
         this.setState(nextState);
+
+        //update redux store
+        //this.dispatch(search(value));
     }
 
     search() {
@@ -29,5 +34,6 @@ class HomePage extends Component {
         )
     }
 }
+HomePage = connect()(HomePage)
 
 export default HomePage;
