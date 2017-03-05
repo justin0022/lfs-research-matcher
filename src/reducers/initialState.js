@@ -4,5 +4,8 @@ export default {
         isAuthorized: 'false',
     },
     jobs: [],
-    searchTerm: '',
+    search: {
+        searchTerm: '',
+        fireSearch: false
+    }
 }

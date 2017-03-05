@@ -16,7 +16,7 @@ const SearchBar = (props) => {
     }
 
     const handleClick = () => {
-        props.buttonPressed();
+        props.onButtonPressed();
     }
 
     return (

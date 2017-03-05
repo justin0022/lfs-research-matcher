@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SearchBar from '../components/SearchBar';
-import { search } from '../actions/searchAction';
+import { updateSearchTerm, fireSearch } from '../actions/searchAction';
 
 const HomePageV2 = (props) => {
 
     return (
         <div>
-            <SearchBar onChange={props.search}/>
+            <SearchBar onChange={props.searchTerm} onButtonPressed={props.fireSearch}/>
             <h2>Homepage V2</h2>
         </div>
     );
@@ -16,13 +16,15 @@ const HomePageV2 = (props) => {
     
 const mapStateToProp = state => {
     return {
-        searchTerm: state.searchTerm
+        searchTerm: state.searchTerm,
+        fireSearch: state.fireSearch
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        search: bindActionCreators(search, dispatch)
+        searchTerm: bindActionCreators(updateSearchTerm, dispatch),
+        fireSearch: bindActionCreators(fireSearch, dispatch)
     }
 }
 
