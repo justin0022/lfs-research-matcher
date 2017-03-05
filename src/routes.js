@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import App from './containers/App'
-import HomePage from './containers/HomePage'
+import HomePage from './containers/HomePageV2'
 import AboutPage from './components/AboutPage'
 
 export default (

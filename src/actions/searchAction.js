@@ -1,4 +1,4 @@
-export const search = (value) => {
+export const search = (value) => ({
     type: 'SEARCH',
     value
-}
+})
