@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem, Nav } from 'react-bootstrap'
-import { Link, IndexLink } from "react-router"
+import { Link, IndexLink, Button } from "react-router"
 
 class App extends Component {
 
@@ -16,6 +16,7 @@ class App extends Component {
           </Navbar.Header>
           <Nav>
             <NavItem eventKey={1}><Link to='/about'>About</Link></NavItem>
+            <NavItem eventKey={2}><Link to='/login'>Login</Link></NavItem>
           </Nav>
         </Navbar>
         <div className="container-fluid">

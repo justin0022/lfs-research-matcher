@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import SearchBar from '../components/SearchBar';
-import { updateSearchTerm, fireSearch } from '../actions/searchAction';
+import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateSearchTerm, fireSearch } from '../actions/searchAction'
+import SearchBar from '../components/SearchBar'
 
 const HomePage = (props) => {
 
@@ -11,8 +11,8 @@ const HomePage = (props) => {
             <h2>Homepage</h2>
             <SearchBar onChange={props.searchTerm} onButtonPressed={props.fireSearch}/>
         </div>
-    );
-};
+    )
+}
     
 const mapStateToProp = state => {
     return {

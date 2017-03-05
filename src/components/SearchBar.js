@@ -1,20 +1,20 @@
-import React from 'react';
-import { Button, Row, Col } from 'react-bootstrap';
+import React from 'react'
+import { Button, Row, Col } from 'react-bootstrap'
 
 const SearchBar = (props) => {
 
     const handleEnterKey = event => {
         if (event.key === 'Enter') {
-            props.onButtonPressed();
+            props.onButtonPressed()
         }
     }
 
     const handleChange = event => {
-        props.onChange(event.target.value);
+        props.onChange(event.target.value)
     }
 
     const handleClick = () => {
-        props.onButtonPressed();
+        props.onButtonPressed()
     }
 
     return (
