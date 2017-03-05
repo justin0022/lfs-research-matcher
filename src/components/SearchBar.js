@@ -3,11 +3,16 @@ import { Button, Row, Col } from 'react-bootstrap';
 
 const SearchBar = (props) => {
 
-    const handleChange = event => {
+    const handleEnterKey = event => {
         if (event.key === 'Enter') {
             props.keyPressed();
         }
+    }
+
+    const handleChange = event => {
         props.onChange(event.target.value);
+
+        console.log('event fired');
     }
 
     const handleClick = () => {
@@ -21,7 +26,7 @@ const SearchBar = (props) => {
                 className="searchBar" 
                 placeholder="Search by jobs" 
                 onChange={handleChange}
-                onKeyPress={handleChange}/>
+                onKeyPress={handleEnterKey}/>
                 <Button 
                     id="searchButton"
                     onClick={handleClick} > Search 
