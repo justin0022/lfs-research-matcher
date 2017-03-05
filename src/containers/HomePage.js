@@ -1,39 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import SearchBar from '../components/SearchBar';
-import { search } from '../actions/searchAction';
+import { updateSearchTerm, fireSearch } from '../actions/searchAction';
 
-class HomePage extends Component {
-    constructor() {
-        super();
-        this.state = {
-            search: ''
-        }
-        this.updateStateWithValue = this.updateStateWithValue.bind(this);
-        this.search = this.search.bind(this);
-    }
+const HomePage = (props) => {
 
-    updateStateWithValue(value) {
-        const nextState = {...this.state, search: value}
-        this.setState(nextState);
-
-        //update redux store
-        //this.dispatch(search(value));
-    }
-
-    search() {
-        console.log(this.state.search)
-    }
+    return (
+        <div>
+            <h2>Homepage</h2>
+            <SearchBar onChange={props.searchTerm} onButtonPressed={props.fireSearch}/>
+        </div>
+    );
+};
     
-    render() {
-        return (
-            <div>
-                <SearchBar onChange={this.updateStateWithValue} buttonPressed={this.search} keyPressed={this.search}/>
-                <h2>This is the Home Page</h2>
-            </div>
-        )
+const mapStateToProp = state => {
+    return {
+        searchTerm: state.searchTerm,
+        fireSearch: state.fireSearch
     }
 }
-HomePage = connect()(HomePage)
 
-export default HomePage;
+const mapDispatchToProps = dispatch => {
+    return {
+        searchTerm: bindActionCreators(updateSearchTerm, dispatch),
+        fireSearch: bindActionCreators(fireSearch, dispatch)
+    }
+}
+
+export default connect(
+    mapStateToProp,
+    mapDispatchToProps
+)(HomePage)

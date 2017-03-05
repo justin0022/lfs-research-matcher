@@ -5,14 +5,12 @@ const SearchBar = (props) => {
 
     const handleEnterKey = event => {
         if (event.key === 'Enter') {
-            props.keyPressed();
+            props.onButtonPressed();
         }
     }
 
     const handleChange = event => {
         props.onChange(event.target.value);
-
-        console.log('event fired');
     }
 
     const handleClick = () => {
