@@ -14,21 +14,18 @@ const HomePage = (props) => {
     )
 }
     
-const mapStateToProp = state => {
-    return {
-        searchTerm: state.searchTerm,
-        fireSearch: state.fireSearch
-    }
-}
+const mapStateToProps = state => ({
+    searchTerm: state.searchTerm,
+    fireSearch: state.fireSearch
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
-        searchTerm: bindActionCreators(updateSearchTerm, dispatch),
-        fireSearch: bindActionCreators(fireSearch, dispatch)
-    }
-}
+
+const mapDispatchToProps = dispatch => ({
+    searchTerm: bindActionCreators(updateSearchTerm, dispatch),
+    fireSearch: bindActionCreators(fireSearch, dispatch)
+})
 
 export default connect(
-    mapStateToProp,
+    mapStateToProps,
     mapDispatchToProps
 )(HomePage)

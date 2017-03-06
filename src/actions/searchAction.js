@@ -1,9 +1,9 @@
-export const updateSearchTerm = (value) => ({
-    type: 'UPDATESEARCH',
+export const updateSearchTerm = value => ({
+    type: 'UPDATE_SEARCH',
     value
 })
 
 export const fireSearch = () => ({
-    type: "FIRESEARCH",
+    type: "FIRE_SEARCH",
     fireSearch: true
 })

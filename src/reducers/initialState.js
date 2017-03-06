@@ -3,7 +3,7 @@ export default {
         userType: '',
         isAuthorized: 'false',
     },
-    jobs: [],
+    researchListing: [],
     search: {
         searchTerm: '',
         fireSearch: false
