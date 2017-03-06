@@ -5,7 +5,7 @@ class ResearchPage extends Component {
     render() {
         return (
             <div>
-                <Table/>            
+                <Table />            
             </div>
         );
     }
