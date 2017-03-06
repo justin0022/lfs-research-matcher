@@ -16,7 +16,8 @@ class App extends Component {
           </Navbar.Header>
           <Nav>
             <NavItem eventKey={1}><Link to='/about'>About</Link></NavItem>
-            <NavItem eventKey={2}><Link to='/login'>Login</Link></NavItem>
+            <NavItem eventKey={2}><Link to='/research'>Research Postings</Link></NavItem>
+            <NavItem eventKey={3}><Link to='/login'>Login</Link></NavItem>
           </Nav>
         </Navbar>
         <div className="container-fluid">
