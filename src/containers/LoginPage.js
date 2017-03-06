@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 const LoginPage = () => {
     return (
         <div>
-            hello
+            <h2>Login Page</h2>
         </div>
     )
 }

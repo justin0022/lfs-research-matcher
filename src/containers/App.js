@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem, Nav } from 'react-bootstrap'
-import { Link, IndexLink, Button } from "react-router"
+import { Link, IndexLink } from "react-router"
 
 class App extends Component {
 
