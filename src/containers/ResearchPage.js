@@ -12,7 +12,7 @@ class ResearchPage extends Component {
                 <h2>Research Page</h2>
                 <Table data={testData}/>            
             </div>
-        );
+        )
     }
 }
 
