@@ -8,11 +8,15 @@ import testData from '../constants/testResearchData'
 import SearchBar from '../components/SearchBar'
 
 class ResearchPage extends Component {
+    constructor(props){
+        super(props)
+    }
+
     render() {
         return (
             <div>
                 <h2>Research Page</h2>
-                <SearchBar onChange={this.searchTerm} onButtonPressed={this.fireSearch}/>
+                <SearchBar onChange={this.props.searchTerm} onButtonPressed={this.props.fireSearch}/>
                 <Table data={testData}/>            
             </div>
         )
