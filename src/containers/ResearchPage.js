@@ -12,12 +12,16 @@ class ResearchPage extends Component {
         super(props)
     }
 
+    componentDidMount () {
+         this.props.researchListings(testData)
+    }
+
     render() {
         return (
             <div>
                 <h2>Research Page</h2>
                 <SearchBar onChange={this.props.searchTerm} onButtonPressed={this.props.fireSearch}/>
-                <Table data={testData} test={this.props.searchTerm}/>            
+                <Table data={testData}/>            
             </div>
         )
     }

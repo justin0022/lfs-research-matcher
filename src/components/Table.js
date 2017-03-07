@@ -1,8 +1,7 @@
 import React from 'react'
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table'
 
-const Table = ({data, test}) => {
-    console.log(test);
+const Table = ({data}) => {
     return (
         <div>
             <BootstrapTable data={data} striped={true} hover={true}>
