@@ -24,7 +24,7 @@ class App extends Component {
           <div>{children}</div>
         </div>
       </div>
-    );
+    )
   }
 }
 
