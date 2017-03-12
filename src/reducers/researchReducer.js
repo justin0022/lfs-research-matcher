@@ -11,8 +11,7 @@ const researchReducer = (state = initialState.research, action) => {
             break
         case 'SELECT_RESEARCH':
             if (R.contains(action.select.id, state.selectedResearch)) {
-                const removedState = R.remove(action.select.id, state.selectedResearch)
-                return {...state, selectedResearch: removedState}
+                return {...state, selectedResearch: R.filter(x => !(x === action.select.id), state.selectedResearch)}
             }
             else return {...state, selectedResearch: R.append(action.select.id, state.selectedResearch)};
         default:
