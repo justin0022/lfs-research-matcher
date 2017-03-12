@@ -21,7 +21,7 @@ class ResearchPage extends Component {
             <div>
                 <h2>Research Page</h2>
                 <SearchBar onChange={this.props.searchTerm} onButtonPressed={this.props.fireSearch}/>
-                <Table data={testData}/>            
+                <Table data={testData}/>   
             </div>
         )
     }
