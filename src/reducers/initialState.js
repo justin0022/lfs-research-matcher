@@ -3,7 +3,11 @@ export default {
         userType: '',
         isAuthorized: 'false',
     },
-    researchListing: [],
+    research: {
+        researchListing: [],
+        selectedResearch: [],
+        filterBy: []
+    },
     search: {
         searchTerm: '',
         fireSearch: false

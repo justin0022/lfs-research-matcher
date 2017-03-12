@@ -5,5 +5,10 @@ export const populateResearch = research => ({
 
 export const filterByWord = word => ({
     type: 'FILTER_BY',
-    term: word
+    filterBy: word
+})
+
+export const selectResearch = id => ({
+    type: 'SELECT_RESEARCH',
+    select: id
 })

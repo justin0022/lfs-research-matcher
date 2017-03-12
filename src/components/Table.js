@@ -1,13 +1,11 @@
 import React from 'react'
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table'
 
-const Table = ({data}) => {
+const Table = (props) => {
+    const data = props.data;
 
-    const handleClick = () => {
-
-    }
     const onRowSelect = isSelected => {
-        console.log(isSelected)
+        props.saveSelected(isSelected);
     }
 
     const selectRowProp = {
@@ -15,6 +13,7 @@ const Table = ({data}) => {
         clickToSelect: 'true',
         onSelect: onRowSelect
     }
+
     const options = {
         sizePerPage: 15
     }
@@ -26,7 +25,6 @@ const Table = ({data}) => {
                 <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
                 <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
             </BootstrapTable>
-            <button onClick={handleClick}/>
         </div>
     );
 };
